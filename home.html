@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="shortcut icon" href="{{ url_for('static', filename = 'img/favicon.jpeg') }}" type="image/x-icon">
+  <link rel="stylesheet" href="{{ url_for('static', filename = 'CSS/style.css') }}">
+  <title>Fake Tweet Detector</title>
+</head>
+<body>
+  <br>
+  <div class="mainheading">
+    <h1 class="heading">Fake Tweet Detector</h1>
+    <p>Enter your Tweet below to detect whether fake or real.</p>
+  </div>
+  <div class="testbox">
+    <form action="{{ url_for('predict') }}" method="POST">
+      <br>
+      <br>
+      <textarea rows="20" placeholder="Enter your tweet here" name="news"></textarea>
+      <div class="btn-block">
+        <button type="submit" class="detect">Detect</button>
+      </div>
+    </form>
+  </div>
+</body>
+</html>
